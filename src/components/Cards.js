@@ -4,7 +4,12 @@ import Card from "./Card";
 export default function Cards() {
   return (
     <div className="cardsArea container">
-      <Card />
+      <div className="columns mt-5 is-8 is-variable">
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </div>
     </div>
-  )
+  );
 }
