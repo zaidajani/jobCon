@@ -1,17 +1,18 @@
 import React from "react";
-import "bulma/css/bulma.min.css";
 
 function Card() {
   return (
-    <div className="column is-4-tablet is-3-desktop">
+    <div className="col-sm-3 mt-4">
       <div className="card">
-        <div className="card-image">
-          <figure className="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="Placeholder image"
-            />
-          </figure>
+        <div className="card-body">
+          <h5 className="card-title">Card title</h5>
+          <p className="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" className="btn btn-primary">
+            Go somewhere
+          </a>
         </div>
       </div>
     </div>

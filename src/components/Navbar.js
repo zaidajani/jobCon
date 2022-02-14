@@ -1,75 +1,43 @@
 import React from "react";
 
 function Navbar() {
-  React.useEffect(() => {
-    const burger = document.querySelector(".navbar-burger");
-
-    burger.addEventListener('click', () => {
-      burger.classList.toggle('is-active');
-      document.querySelector('.navbar-menu').classList.toggle('is-active');
-    });
-  });
-
   return (
-    <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
-        <a className="navbar-item" href="/">
-          <img src="jobcon.jpg" width="112" height="28" />
-        </a>
-
-        <a
-          role="button"
-          className="navbar-burger"
-          data-target="navMenu"
-          aria-label="menu"
-          aria-expanded="false"
-        >
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      </div>
-
-      <div id="navbarBasicExample" className="navbar-menu">
-        <div className="navbar-start">
-          <a className="navbar-item" href="/">
-            Home
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="#">Navbar</a>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link" href="#">Link</a>
+        </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
           </a>
-
-          <a
-            className="navbar-item"
-            href="https://github.com/zaidajani/jobCon"
-            target="_blank"
-          >
-            Documentation
-          </a>
-
-          <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link">More</a>
-
-            <div className="navbar-dropdown">
-              <a className="navbar-item" href="/about">
-                About
-              </a>
-              <a className="navbar-item" href="/">
-                Jobs
-              </a>
-              <a className="navbar-item" href="/contact">
-                Contact
-              </a>
-              <hr className="navbar-divider" />
-              <a
-                className="navbar-item"
-                href="https://github.com/zaidajani/jobCon/issues"
-                target="_blank"
-              >
-                Report an issue
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </nav>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Action</a></li>
+            <li><a className="dropdown-item" href="#">Another action</a></li>
+            <li><hr className="dropdown-divider" /></li>
+            <li><a className="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+      <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button className="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
   );
 }
 
